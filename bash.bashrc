@@ -90,7 +90,10 @@ function set_bash_prompt () {
 
   # Set the bash prompt variable.
   # PS1="${PYTHON_VIRTUALENV}${YELLOW}\w${COLOR_NONE}${BRANCH}${PROMPT_SYMBOL} "
-  PS1="${PYTHON_VIRTUALENV}${GREEN}\u@\h${COLOR_NONE}:${YELLOW}\w${COLOR_NONE}${BRANCH}${PROMPT_SYMBOL} "
+  PS1="${PYTHON_VIRTUALENV}${GREEN}\u@\h${COLOR_NONE}:${YELLOW}\w${COLOR_NONE}${BRANCH}${PROMPT_SYMBOL}"
+
+  # sava history command lines
+  PROMPT_COMMAND='history -a'
 }
 
 # Tell bash to execute this function just before displaying its prompt.
